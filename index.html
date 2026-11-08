@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DemoCasino</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div id="auth">
+    <div class="box">
+      <div class="logo">🎰 Demo<span>Casino</span></div>
+      <p class="sub">Демо-казино на виртуальные фишки.<br>Реальные деньги не используются.</p>
+      <div class="tabs"><button id="tl" class="on" onclick="tab(0)">Вход</button><button id="tr"
+          onclick="tab(1)">Регистрация</button></div>
+      <input id="nick" type="text" maxlength="20" placeholder="Никнейм" class="hide">
+      <input id="em" type="email" placeholder="Email">
+      <input id="pw" type="password" placeholder="Пароль">
+      <div class="err" id="err"></div>
+      <button class="btn full" id="go" onclick="submitAuth()">Войти</button>
+    </div>
+  </div>
+
+  <div id="app" class="hide">
+    <header>
+      <button class="burger" onclick="drawer(1)"><i></i><i></i><i></i></button>
+      <div class="hr">
+        <div class="bal" id="bal">$1,000</div>
+        <div class="ava" onclick="go('profile')">🎰</div>
+      </div>
+    </header>
+    <main id="view"></main>
+  </div>
+
+  <div id="ov" onclick="drawer(0)"></div>
+  <aside id="drawer">
+    <div class="logo">🎰 Demo<span>Casino</span></div>
+    <div id="nav"></div>
+    <div class="nav" onclick="logout()" style="margin-top:auto">🚪 Выйти</div>
+    <div class="foot">Демо-режим: виртуальные фишки, реальные деньги не используются.</div>
+  </aside>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
